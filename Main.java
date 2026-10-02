@@ -28,6 +28,36 @@ public class Main{
 
         }
 
+        System.out.println("----------------------------------------------------");
+
+
+        // 02
+        // Node reference variable
+        System.out.println("Node reference variable");
+
+        Node start = new Node(15);
+
+        start.next = new Node(25);
+
+        start.next.next = new Node(35);
+
+
+        System.out.println(start.data);
+        System.out.println(start.next.data);
+        System.out.println(start.next.next.data);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }   
@@ -44,3 +74,5 @@ class Node {
         this.next = null;
     }
 }
+
+
