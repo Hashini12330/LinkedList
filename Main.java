@@ -45,7 +45,26 @@ public class Main{
         System.out.println(start.data);
         System.out.println(start.next.data);
         System.out.println(start.next.next.data);
+        System.out.println("----------------------------------------------------");
 
+
+
+
+        // 03
+        // create Node
+        Node1 a1 = new Node1(1);
+        Node1 a2 = new Node1(2);
+        Node1 a3 = new Node1(3);
+
+        // connect Node
+        a1.next = a2;
+        a2.next = a3;
+
+        // print Node
+        System.out.println(a1.getValueIdNode1());
+        System.out.println(a1.next.getValueIdNode1());
+        System.out.println(a1.next.next.getValueIdNode1());
+        System.out.println("----------------------------------------------------");
 
 
 
@@ -76,3 +95,19 @@ class Node {
 }
 
 
+// 03
+class Node1{
+
+    private int data;
+    Node1 next;
+
+    public Node1(int data){
+        this.data = data;
+
+    }
+
+    public int getValueIdNode1(){
+        return this.data;
+    }
+
+}
