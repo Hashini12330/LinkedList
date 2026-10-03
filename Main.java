@@ -102,20 +102,47 @@ public class Main{
         
 
 
+        // for loop
         for(Node1 p2 = start2; p2 != null; p2 = p2.next){
             System.out.println(p2.getValueIdNode1());
 
         }
+        System.out.println("----------------------------------------------------");
+
+        
+
 
         // 06
-        // 
+        // create sortedList object
+        sortedList list = new sortedList();
+
+        // check whether the list is empty
+        System.out.println("Is list Empty: " + list.isEmpty());
+
+        // insert some Nodes manually
+        list.first = new Node2(30.5);
+        list.first.next = new Node2(10.5);
+        list.first.next.next = new Node2(20.5);
+
+        // dis the list
+        System.out.println("Linked List:");
+
+        Node2 current = list.first;
 
 
+        // using while loop
+        while(current != null){
+            current.dis();
+            current = current.next;
+        }
+        System.out.println();   
+        System.out.println("################################");
 
-
-
-
-
+        // using for loop
+        for (Node2 p3 = list.first; p3 != null; p3 = p3.next) {
+            System.out.println(p3.dData);
+        }
+        
     }   
 }
 
@@ -150,3 +177,34 @@ class Node1{
 }
 
 
+
+
+// 06
+class Node2{
+    public double dData;
+    public Node2 next;  // points to the next Node2
+
+    public Node2(double dd){
+        dData = dd;
+    }
+
+    public void dis(){
+        System.out.println(dData + " ");
+    }
+
+}
+
+
+class sortedList{
+    public Node2 first;
+
+    public sortedList(){
+        first = null;
+    }
+
+    public boolean isEmpty(){
+        return (first == null);
+    }
+
+
+}
