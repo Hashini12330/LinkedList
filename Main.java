@@ -82,7 +82,33 @@ public class Main{
 
 
 
+        // 05
+        // with while loop
+        // create linked list
+        Node1 start2 = new Node1(1000);
 
+        start2.next = new Node1(2000);
+        start2.next.next = new Node1(3000);
+
+        Node1 p1 = start2;
+
+        // traverse the linked list
+        while(p1 != null){
+            System.out.println(p1.getValueIdNode1());
+
+            p1 = p1.next;
+        }
+        System.out.println("----------------------------------------------------");
+        
+
+
+        for(Node1 p2 = start2; p2 != null; p2 = p2.next){
+            System.out.println(p2.getValueIdNode1());
+
+        }
+
+        // 06
+        // 
 
 
 
@@ -122,3 +148,5 @@ class Node1{
     }
 
 }
+
+
