@@ -68,6 +68,17 @@ public class Main{
 
 
 
+        // 04
+        // practice: 01
+        Node1 start1 = new Node1(100);
+        start1.next = new Node1(200);
+        start1.next.next = new Node1(300);
+
+        // dis value
+        System.out.println(start1.getValueIdNode1());
+        System.out.println(start1.next.getValueIdNode1());
+        System.out.println(start1.next.next.getValueIdNode1());
+        System.out.println("----------------------------------------------------");
 
 
 
